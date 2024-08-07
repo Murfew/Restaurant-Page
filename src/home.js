@@ -31,6 +31,8 @@ export function loadHomePage() {
   const headlineContainer = document.createElement("div");
 
   content.setAttribute("id", "content");
+  content.classList.add("home");
+  headlineContainer.classList.add("headline");
 
   body.appendChild(content);
   content.appendChild(headlineContainer);

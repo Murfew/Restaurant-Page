@@ -3,6 +3,7 @@ export function loadMenuPage() {
   const content = document.createElement("div");
 
   content.setAttribute("id", "content");
+  content.classList.add("menu");
 
   body.appendChild(content);
 }
