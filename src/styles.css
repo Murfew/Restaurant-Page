@@ -36,9 +36,14 @@ button {
   border-radius: 5px;
 }
 
-button:hover {
+button.active {
   border-left: solid 5px green;
   border-right: solid 5px red;
+}
+
+button:hover {
+  text-decoration: underline overline;
+  text-underline-offset: 10px;
 }
 
 #content {

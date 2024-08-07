@@ -10,7 +10,16 @@ const homeBtn = document.querySelector(".home");
 const menuBtn = document.querySelector(".menu");
 const contactBtn = document.querySelector(".contact");
 
+homeBtn.classList.add("active");
+
 homeBtn.addEventListener("click", () => {
+  homeBtn.classList.add("active");
+  if (menuBtn.classList.contains("active")) {
+    menuBtn.classList.remove("active");
+  }
+  if (contactBtn.classList.contains("active")) {
+    contactBtn.classList.remove("active");
+  }
   const body = document.querySelector("body");
   const content = document.querySelector("#content");
   body.removeChild(content);
@@ -18,6 +27,13 @@ homeBtn.addEventListener("click", () => {
 });
 
 menuBtn.addEventListener("click", () => {
+  menuBtn.classList.add("active");
+  if (homeBtn.classList.contains("active")) {
+    homeBtn.classList.remove("active");
+  }
+  if (contactBtn.classList.contains("active")) {
+    contactBtn.classList.remove("active");
+  }
   const body = document.querySelector("body");
   const content = document.querySelector("#content");
   body.removeChild(content);
@@ -25,6 +41,13 @@ menuBtn.addEventListener("click", () => {
 });
 
 contactBtn.addEventListener("click", () => {
+  contactBtn.classList.add("active");
+  if (menuBtn.classList.contains("active")) {
+    menuBtn.classList.remove("active");
+  }
+  if (homeBtn.classList.contains("active")) {
+    homeBtn.classList.remove("active");
+  }
   const body = document.querySelector("body");
   const content = document.querySelector("#content");
   body.removeChild(content);
